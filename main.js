@@ -38,6 +38,7 @@ async function generateImages() {
 			prompt: userInput.value,
 			model: "black-forest-labs/flux-dev",
 			response_format: "url",
+			response_extension : "png",
 			width: 1920,
 			height: 1080,
 			n: 1 // 👈 Request 3 images
