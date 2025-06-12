@@ -1,0 +1,264 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: arial;
+    color: white;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, #9134ea, #1c7be4);
+    width: inherit;
+    height: inherit;
+
+}
+
+.container{
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.header{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.name{
+    font-size: 50px;
+}
+
+.header-title{
+    font-size: 20px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.783);
+    width: 60%;
+    margin-left: 250px;
+    margin-top: 10px;
+    line-height: 1.7;
+    margin-bottom: 42px;
+
+}
+
+.box-container{
+    border: 1px solid rgba(255, 255, 255, 0.495);
+    width: 70%;
+    background-image: linear-gradient(to bottom right, #9134ea, #1c7be4);
+    position: inherit;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.describe-img{
+    align-self: self-start;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.inputs-field{
+    align-self: self-start;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.user-input{
+    width: 75%;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 14px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.769);
+    background-color: rgba(255, 255, 255, 0.347);
+
+}
+
+.user-input::placeholder{
+    color: rgba(255, 255, 255, 0.774);
+}
+
+
+
+
+
+.btn{
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    border: 0px;
+    background-image: linear-gradient(to top left, rgb(132, 0, 255), rgb(255, 0, 34));
+    font-size: 16px;
+}
+.btn:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-container{
+    border: 2px dotted rgba(255, 255, 255, 0.466);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.generated-img{
+    width: 75%;
+    display: flex;
+    margin-top: 15px;
+}
+
+.temporary-text{
+    display: flex;
+    font-size: 23px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.562);
+    margin-top: -70px;
+}
+
+.help-text{
+    display: flex;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.374);
+    font-weight: normal;
+}
+
+.default-prompts{
+    margin-top: 30px;
+    align-self: self-start;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.default-prompts-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+    
+}
+
+.btn1{
+    align-self: self-start;
+    display: flex;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.587);
+    border-radius: 5px;
+}
+
+.btn2{
+    align-self: self-start;
+    display: flex;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.587);
+    border-radius: 5px;
+}
+
+.btn3{
+    align-self: self-start;
+    display: flex;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.587);
+    border-radius: 5px;
+}
+
+.btn4{
+    align-self: self-start;
+    display: flex;
+    margin-right: 5px;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.587);
+    border-radius: 5px;
+}
+
+.alert{
+    color: rgb(255, 232, 232);
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .header-title {
+    font-size: 15px;
+    margin-left: 5px;
+    width: 95%;
+  }
+
+  .name{
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .user-input{
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+  .generated-img{
+    width: 90%;
+  }
+
+  .temporary-text{
+    margin-top: -30px;
+    font-size: 15px;
+    margin-bottom: 5px;
+
+  }
+
+  .help-text{
+    font-size: 13px;
+  }
+
+  .box-container{
+    padding: 10px;
+    width: 86%;
+  }
+
+
+  .img-container{
+    height: max-content;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+
+  .default-prompts-buttons{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .alert{
+    margin: 30px;
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Boxicons CSS -->
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"/>
+    <link
+      href="https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai Image Generator</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="header">
+          <h1 class="name">
+            <i class="bx bx-sparkles-alt" style="font-size: 35px;color: #ffd600;" ></i> AI Image
+            Generator <i class="bx bx-sparkles-alt" style="font-size: 35px;color: #ffd600;"></i>
+          </h1>
+          <h2 class="header-title">
+          Transform your imagination into stunning visuals with the power of AI.
+          Simply describe what you want to see and watch magic happen.</h2>
+      </div>
+
+      <div class="box-container">
+          <h1 class="describe-img">Describe your image</h1>
+          <div class="inputs-field">
+             <input type="text" name="" id="" placeholder="Your propmt!" class="user-input">
+             <button class="btn"><i class="bx bx-sparkles-alt" style="color: white"></i> Generate</button>
+          </div>
+          <div class="img-container">
+             <img src="default.png" alt="" class="generated-img">
+             <h2 class="temporary-text">Your generated image will appear here</h2>
+             <h3 class="help-text">Enter a prompt above to get started</h3>
+          </div>
+          <h1 class="default-prompts">Try these example prompts:</h1>
+          <div class="default-prompts-buttons">
+             <button class="btn1">A futuristic city floating in clouds</button>
+             <button class="btn2">Cute robot playing with a kitten</button>
+             <button class="btn3">Abstract art with vibrant colors</button>
+             <button class="btn4">Peaceful forest with magical lighting</button>
+          </div>
+
+      </div>
+
+      <h3 class="alert">Note: if you refresh the page or generate another prompt the old image will be gone </h3>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
