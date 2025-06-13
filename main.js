@@ -8,7 +8,12 @@ let btn2 = document.querySelector(".btn2")
 let btn3 = document.querySelector(".btn3")
 let btn4 = document.querySelector(".btn4")
 let imgBox = document.querySelector(".img-container")
+let userTokens = document.querySelector(".span")
+let tokenDom = document.querySelector("#token")
+let coin = document.querySelector("#coin")
+let tokenContainer = document.querySelector(".tokens")
 
+let token = 5
 
 const domUpdating =function (){
 if(userInput.value.length > 1){
@@ -25,10 +30,12 @@ if(userInput.value.length > 1){
 
 
 
-const API_KEY = "eyJhbGciOiJIUzI1NiIsImtpZCI6IlV6SXJWd1h0dnprLVRvdzlLZWstc0M1akptWXBvX1VaVkxUZlpnMDRlOFUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJnb29nbGUtb2F1dGgyfDExMzUzNDIwMTQ2ODU4NTMwNjI3NCIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIiwiaXNzIjoiYXBpX2tleV9pc3N1ZXIiLCJhdWQiOlsiaHR0cHM6Ly9uZWJpdXMtaW5mZXJlbmNlLmV1LmF1dGgwLmNvbS9hcGkvdjIvIl0sImV4cCI6MTkwNzMwMDE2NCwidXVpZCI6IjM4OTEwZjk2LTk5YTEtNDUzMC05ZjkwLWEwZGZhMmYxZjE4MiIsIm5hbWUiOiJ3YXF0aTIxIiwiZXhwaXJlc19hdCI6IjIwMzAtMDYtMTBUMDU6MzY6MDQrMDAwMCJ9.FY7hNFHoZfBDUfXX4dkamx7N-LpnRU6U_7axLPe0XGY"; // replace with your real key
-
+const API_KEY = "eyJhbGciOiJIUzI1NiIsImtpZCI6IlV6SXJWd1h0dnprLVRvdzlLZWstc0M1akptWXBvX1VaVkxUZlpnMDRlOFUiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNTY3Mzc2MzM4NDg4MzI5NzkxMyIsInNjb3BlIjoib3BlbmlkIG9mZmxpbmVfYWNjZXNzIiwiaXNzIjoiYXBpX2tleV9pc3N1ZXIiLCJhdWQiOlsiaHR0cHM6Ly9uZWJpdXMtaW5mZXJlbmNlLmV1LmF1dGgwLmNvbS9hcGkvdjIvIl0sImV4cCI6MTkwNzQ1ODg5OSwidXVpZCI6IjdjOTQ3ODg3LTg1MGUtNGFjZS05NzQzLTc4MGQzYmJmZTQ5NiIsIm5hbWUiOiJhbGlsbyIsImV4cGlyZXNfYXQiOiIyMDMwLTA2LTEyVDAxOjQxOjM5KzAwMDAifQ.4P-kfOPX6AWaUlHR-IKRsPsa3EA2fM3ICvRrAtCS2_A"
 async function generateImages() {
-	const response = await fetch("https://api.studio.nebius.ai/v1/images/generations", {
+	if(token > 0){
+		token--
+		userTokens.textContent = token
+		const response = await fetch("https://api.studio.nebius.ai/v1/images/generations", {
 		method: "POST",
 		headers: {
 			Authorization: `Bearer ${API_KEY}`,
@@ -46,9 +53,21 @@ async function generateImages() {
 	});
 
 	const result = await response.json();
-  console.log(result.data[0].url)
+  console.log(result.data)
   temp.textContent = ""
   img.src = `${result.data[0].url}`
+	}else if(token < 1){
+		alert("Token low balance")
+		img.src = "warning.png"
+		temp.textContent = "You're out of tokens!"
+		temp.style = "margin-top -60px;"
+	}
+	
+
+	
+	
+	
+  
 
 }
 
@@ -57,11 +76,10 @@ async function generateImages() {
 
 
 btn.addEventListener("click", () =>{
-
-  domUpdating()  
-  generateImages()
-  
-  
+	
+        domUpdating()  
+        generateImages()
+	
 })
 
 btn1.addEventListener("click", ()=>{
