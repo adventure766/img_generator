@@ -54,6 +54,48 @@ body{
     margin-bottom: 40px;
 }
 
+.reminder{
+  width: fit-content;
+  font-weight: normal;
+  padding: 10px;
+
+}
+
+.warning{
+  margin-top: 45px;
+  margin-left: -240px;
+  font-size: 15px;
+  font-weight: normal;
+  color: rgb(250, 19, 39);
+  position: absolute;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.142);
+
+
+}
+
+.tokens{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.span{
+  display: flex; 
+  padding: 1px; 
+  font-size: 15px; 
+  font-family: arial; 
+  margin-left: 3px;
+}
+#token{
+  background-color: rgb(4, 206, 4);
+  margin-left: 0px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  display: flex;
+  width: max-content;
+  min-width: 70px;
+}
+
 .describe-img{
     align-self: self-start;
     font-size: 20px;
